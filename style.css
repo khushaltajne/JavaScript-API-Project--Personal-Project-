@@ -1,0 +1,61 @@
+body {
+  background: rgb(218, 217, 217);
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(1500px);
+  }
+}
+
+h1 {
+  background: black;
+  color: azure;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+
+h1 span {
+  font-size: 45px;
+  position: absolute;
+  white-space: nowrap;
+  animation: moving 8s infinite linear;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  background: whitesmoke;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.card p {
+  margin: 10px 0;
+}
